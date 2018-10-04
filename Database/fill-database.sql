@@ -77,7 +77,7 @@ phone)
 SELECT  
 Customer_ID, 
 Customer_Name,
-Customer_Brithday,
+STR_TO_DATE(Customer_Brithday, '%d/%m/%Y'),
 Customer_Addresss,
 Customer_Occupation,
 Customer_Gender,
@@ -94,7 +94,7 @@ phone)
 SELECT  
 Customer_ID, 
 Customer_Name,
-Customer_Brithday,
+STR_TO_DATE(Customer_Brithday, '%d/%m/%Y'),
 Customer_Addresss,
 Customer_Occupation,
 Customer_Gender,
@@ -109,7 +109,7 @@ city,
 state)
 SELECT
 ﻿Store_ID,
-Store_Name,
+SUBSTRING_INDEX(Store_Name, '_', 1),
 Store_Address,
 Store_Phone,
 Store_City,
